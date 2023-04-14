@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+      <nav>
+         <img src="images/logoforweb. (2).png" class="logoforweb">
+         <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expectation">Expectation</a></li>
+         </ul>
+      </nav> 
+      <div class="header-text">
+        <p>Hi,</p>
+        <h1> I'm <span>Whenzy</span>.<br>Welcome!</h1>
+      </div>
+    </div>
+ </div>
+<!-- ------------------------about--------------------------- -->
+ <div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="userr.png"> 
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About<span> Me</span></h1>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('name')">Name</p>
+                    <p class="tab-links" onclick="opentab('address')">Address</p>
+                    <p class="tab-links" onclick="opentab('contact')">Contact</p>
+                    <p class="tab-links" onclick="opentab('course')">Course</p>
+                </div>
+                <div class="tab-contents active-tab" id="name">
+                    <ul>
+                        <li><span>First Name</span><br>Whenzy</li>
+                        <li><span>Middle Name</span><br>Fariñas</li>
+                        <li><span>Last Name</span><br>Vito Cruz</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="address"> 
+                    <ul>
+                        <li><span>Barangay</span><br>Nagsincaoan</li>
+                        <li><span>City</span><br>Cabugao</li>
+                        <li><span>Province</span><br>Ilocos Sur</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="contact">
+                    <ul>
+                        <li><span>Cp Number</span><br>09263686357</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="course">
+                    <ul>
+                        <li><span>Course</span><br>BS Info Tech</li>
+                        <li><span>Year</span><br>2nd Year</li>
+                        <li><span>Section</span><br>A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<!-- -------------------expectation--------------- -->
+<div id="expectation">
+    <div class="container">
+        <h1 class="sub-title">My <span>Expectation</span></h1>
+        <div class="expectation-list">
+            <div>
+                <h2><span>Expectation</span> to this <span>subject</span></h2>
+                <p>I expect a great deal from the subject Integrative programming and technologies. I'm expecting to learn how to think critically and analytically, as well as creatively. I expect to learn about various programming languages, the different ways that they can be used, and how they relate to each other. I also expect to learn about the different uses of these programming languages, including both the practical and the artistic. I expect to be able to use the concept of integrative programming and technologies 1 in my future career and personal life.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+</body>
+</html>
